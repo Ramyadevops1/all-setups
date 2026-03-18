@@ -2,11 +2,11 @@
   tasks:
     - name: download tomcat from dlcdn
       get_url:
-        url: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.111/bin/apache-tomcat-9.0.111.tar.gz"
+        url: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.115/bin/apache-tomcat-9.0.115.tar.gz"
         dest: "/root/"
 
     - name: untar the apache file
-      command: tar -zxvf apache-tomcat-9.0.111.tar.gz
+      command: tar -xzf apache-tomcat-9.0.115.tar.gz
 
 
     - name: rename the tomcat
@@ -14,7 +14,7 @@
       tags: abc
 
     - name: install java
-      command: yum install java-1.8.0-openjdk -y
+      command: yum install java-17-amazon-corretto -y
 
     - name: setting the roles in tomcat-user.xml file
       template:
