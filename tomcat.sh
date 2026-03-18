@@ -8,4 +8,5 @@ sed -i '59  a\</tomcat-users>' apache-tomcat-9.0.115/conf/tomcat-users.xml
 sed -i '56d' apache-tomcat-9.0.115/conf/tomcat-users.xml
 sed -i '21d' apache-tomcat-9.0.115/webapps/manager/META-INF/context.xml
 sed -i '22d'  apache-tomcat-9.0.115/webapps/manager/META-INF/context.xml
-sh apache-tomcat-9.0.115/bin/startup.sh
+mv apache-tomcat-9.0.111 tomcat
+sh tomcat/bin/startup.sh
